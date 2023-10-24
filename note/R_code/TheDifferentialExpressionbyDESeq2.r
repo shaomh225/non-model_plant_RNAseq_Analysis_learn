@@ -3,9 +3,10 @@
 # 
 # https://bioconductor.org/packages/release/bioc/html/DESeq2.html
 #
-
+# Install the DESeq2 package
+BiocManager::install("DESeq2", force = TRUE)
 # Load the library.
-suppressPackageStartupMessages(library(DESeq2))
+library(DESeq2)
 
 # The name of the file that contains the counts.
 counts_file = "counts.csv"
