@@ -143,6 +143,6 @@ write.csv(total_VsaFsa_Remove0,
 
 
 
-###Acknowlegement:
+###Citation&Acknowlegement:
 ###This R code is based on Website "https://www.biostarhandbook.com/books/rnaseq/differential-expression.html"
 ###and I make some adjustments to suit for my data.
