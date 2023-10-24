@@ -25,6 +25,6 @@ colnames(count_matrix) <- gsub(".*/", " ", folders)
 print(count_matrix)
 write.csv(count_matrix, file = "H:/Project/downsteam/kallisto_counts/merged_kallisto_counts.csv", row.names = TRUE)
 
-### Acknowledgements:
+### Citation&Acknowlegement:
 ### These R codes are based on the  website: "https://zbengt.github.io/2023-03-09-Mergin-Kallisto_Abundance/"
 ### and make some adjustments to make it more suitable for my data. (line 5-7)
