@@ -128,10 +128,14 @@ names(total)[names(total)=="baseMeanA"] <- "VSA"
 names(total)[names(total)=="baseMeanB"] <- "FSA"
 total_VsaFsa <- total
 
+# Write the results to the standard output.
+write.csv(total_VsaFsa,
+          file="H:\\Project\\downsteam\\different_expression\\result_VsaFsa.csv",
+          row.names=FALSE, quote=FALSE)
+
+
 # Remove the specific row whose "baseMean" is 0
 total_VsaFsa_Remove0 = subset(total_VsaFsa, total_VsaFsa$baseMean != 0)
-
-
 # Write the results to the standard output.
 write.csv(total_VsaFsa_Remove0,
           file="H:\\Project\\downsteam\\different_expression\\result_VsaFsa_remove0.csv",
