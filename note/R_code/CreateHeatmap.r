@@ -2,13 +2,14 @@
 # Create heat map from a differential expression count table.
 #
 # Load the library.
-suppressPackageStartupMessages(library(gplots))
+#install.packages("gplots")
+library(gplots)
 
 # The name of the file that contains the counts.
-count_file = "results.csv"
+count_file = "H:\\Project\\downsteam\\different_expression\\result_VsaFsa_remove0.csv"
 
 # The name of the output file.
-output_file = "heatmap.pdf"
+output_file = "H:\\Project\\downsteam\\different_expression\\result_VsaFsa_remove0_heatmap.pdf"
 
 # Inform the user.
 print("# Tool: Create Heatmap ")
@@ -69,11 +70,14 @@ zscores = as.matrix(zscores)
 # Set the color palette.
 col = greenred
 
-# Create a PDF device
-pdf(output_file, width = WIDTH, height = HEIGHT)
 
-heatmap.2(zscores, col=col, density.info="none", Colv=NULL,
-    dendrogram="row", trace="none", margins=MARGINS, lhei=LHEI)
+
+heatmap.2(zscores, 
+               col=greenred, 
+               density.info="none", Colv=NULL,
+    dendrogram="row", trace="none", margins=c(9,12), lhei=c(1,5))
+# Create a PDF device to save the plot
+pdf(output_file, width = 12, height = 13)
 
 #dev.off()
 
